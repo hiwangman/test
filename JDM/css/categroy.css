@@ -1,0 +1,46 @@
+.cate-main,body,html {
+	height: 100%;
+}
+.cate-main {
+	padding-top: 45px;
+	box-sizing:border-box;
+}
+.cate-main .left {
+	width: 74px;
+	border-right: 1px solid #ccc;
+	height: 100%;
+	overflow: hidden;
+}
+.cate-main .left li {
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+.cate-main .right {
+	height: 100%;
+	margin-left: 75px;
+	padding-left: 10px;
+	/* 形成一个bfc空间，与左边的盒子完全脱离干系，就没有图文绕排带来的问题 */
+	overflow: hidden;
+}
+.cate-main .scroll-wrap {
+	padding-top: 10px;
+} 
+.cate-main .cate-product {
+	margin: 10px 0;
+}
+.cate-main .cate-product h3 {
+	font-size: 16px;
+	line-height: 2;
+}
+.cate-main .cate-product ul {
+	background-color: #fff;
+}
+.cate-main .cate-product li a{
+	display: block;
+	padding:0 10px;
+}
+.cate-main .cate-product li p {
+	text-align: center;
+}

@@ -1,0 +1,223 @@
+html,body {
+	min-width: 320px;
+	max-width: 640px;
+	margin:0 auto;
+}
+.jd-header {
+	height: 40px;
+	line-height: 40px;
+	background-color: rgba(201, 21, 35,0);
+	position: fixed;
+	/* 绝对 固定 定位的元素在没有ltbr的情况下，会在标准流的位置上呆着 */
+	width: 100%;
+	z-index: 9998;
+	min-width: 320px;
+	max-width: 640px;
+}
+.jd-header .left {
+	width: 75px;
+	height: 40px;	
+	position: relative;
+}
+.jd-header .left:before {
+	width: 56px;
+	height: 20px;
+	background-position: 0 -110px;
+}
+.jd-header .right {
+	width: 48px;
+	height: 40px;
+	text-align: center;
+}
+.jd-header .right a {
+	color: #fff;
+	font-size: 14px;
+}
+.jd-header .center {
+	height: 40px;
+	margin: 0 48px 0 75px;
+	position: relative;
+}
+.jd-header .center input[type="search"] {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	background-color: #fff;
+	border-radius: 15px;
+	text-indent: 33px;
+}
+.jd-header .center:before {
+	width: 20px;
+	height: 20px;
+	background-position: -60px -109px;
+	left: 10px;	
+}
+
+/* 轮播图 */
+.carousel {
+	position: relative;
+	overflow: hidden;
+}
+.carousel  ul{
+	/* 这里面的高度需要在js里面动态获取出来 */
+	min-height: 143px; 
+}
+.carousel  ul li {
+	position: absolute;
+	/* 这里面不要用left去移动位置，因为这样的话整个li的原点就被移动了 */
+	left: 0;
+	top: 0;
+	width: 100%;
+	transform:translateX(300%);
+}
+.points {
+	/* 这个盒子的宽度是未知，要实现一个未知盒子居中 */
+	bottom: 10px;
+}
+.points li {
+	width: 5px;
+	height: 5px;
+	border: 1px solid #FFF;
+	border-radius: 50%;
+	margin: 0 2px;
+	float: left;
+}
+.points li.active {
+	background-color: #fff;
+}
+
+
+
+.jd-nav li a {
+	display: block;
+	padding: 10px;
+}
+.jd-nav li p {
+	text-align: center;
+	font-size: 14px;
+}
+
+
+
+
+.jd-news {
+	padding:20px 8px;
+}
+.jd-news .jd-info {
+	line-height: 30px;
+	background-color: #fff;
+	border-radius: 5px;
+}
+.jd-news .jd-info .left {
+	width: 80px;
+	height: 30px;
+	position: relative;
+}
+.jd-news .jd-info .right {
+	width: 40px;
+	height: 30px;
+}
+.jd-news .jd-info .center {
+	height: 30px;
+	margin:0 40px 0 80px;
+	text-indent: 5px;
+	overflow: hidden;
+}
+
+.jd-sec-kill {
+	background-color: #fff;
+}
+.jd-sec-t {
+	height: 35px;
+	line-height: 35px;
+}
+.jd-sec-t .jd-sec-txt {
+	position: relative;
+	text-indent: 35px;
+	color: #D90000;
+	letter-spacing: 5px;
+	font-size: 14px;
+}
+.jd-sec-t .jd-sec-txt:before {
+	width: 18px;
+	height: 22px;
+	background-position: -84px -109px;
+	left: 10px;
+}
+.more-kill {
+	margin-right: 10px;
+}
+.jd-sec-time {
+	font-size: 0;
+}
+.jd-sec-time span {
+	display: inline-block;
+	padding:5px 2px;
+	background-color: #000;
+	color: #fff;
+	line-height: 1;
+	font-size: 12px;
+	vertical-align: middle;
+}
+.jd-sec-time span:nth-child(3n) {
+	background-color: #fff;
+	color: #000;
+}
+.jd-sec-time span:nth-child(3n+1) {
+	border-radius: 5px 0 0 5px;
+}
+.jd-sec-time span:nth-child(3n+2) {
+	border-radius: 0 5px 5px 0 ;
+}
+.jd-sec-b {
+	overflow: auto;
+	/* 解决IOS默认滑动很卡的情况 */
+	-webkit-overflow-scrolling : touch;
+}
+.jd-sec-b ul {
+	/* 先写一个死的 后面用JS动态去求 */
+	width: 10000px;
+}
+.jd-sec-b li {
+	width: 92px;
+}
+.jd-sec-b li a {
+	display: block;
+	width: 100%;
+	border-right: 1px solid #ccc;
+	padding:10px 0;
+}
+.jd-sec-b li img {
+	width: 60px;
+	margin: 0 auto;
+}
+.jd-sec-b li p {
+	text-align: center;
+}
+.jd-sec-b .new-price {
+	font-size: 16px;
+	color: #D90000;
+}
+.jd-sec-b .old-price {
+	text-decoration: line-through;
+}
+.jd-product {
+
+}
+.jd-product li {
+	border-bottom: 1px solid #ccc;
+	position: relative;
+}
+.jd-product li a {
+	display: block;
+	padding:10px;
+}
+.jd-product li:nth-child(2n+1):before {
+	content: '';
+	width: 0px;
+	height: 100%;
+	border-right: 1px solid #ccc;
+	position: absolute;
+	right: 0;
+	top: 0;
+}

@@ -1,0 +1,99 @@
+/*
+* @Author: Administrator
+* @Date:   2017-06-21 16:07:02
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-06-24 16:57:00
+*/
+/* 精灵图的公共类 */
+.jd-sprite:before {
+	content: '';
+	background:  url(../images/icons/jd-sprites.png) no-repeat;
+	-webkit-background-size: 200px;
+	background-size: 200px;
+}
+/* 水平垂直居中的公共类 */
+.center-xy:before,.center-self-xy {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+}
+/* 垂直居中的公共类 */
+.center-y:before,.center-self-y {
+	position: absolute;
+	top: 50%;
+	transform:translateY(-50%);
+}
+/* 水平居中公共类 */
+.center-x:before,.center-self-x {
+	position: absolute;
+	left: 50%;
+	transform:translateX(-50%);
+}
+/* 公共的头部样式 */
+.common-header {
+	position: fixed;
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	background: linear-gradient(to bottom,#fff,#e0e0e0);
+}
+.common-header .left {
+	width: 40px;
+	height: 44px;
+	position: relative;
+}
+.common-header .left:before {
+	width: 13px;
+    height: 20px;
+    background-position: -24px 0;
+}
+.common-header .right {
+	width: 42px;
+	height: 44px;
+	position: relative;
+}
+.common-header .right:before{
+	width: 18px;
+    height: 19px;
+    background-position: -61px 0;
+}
+.common-header .center {
+	height: 44px;
+	margin: 0 42px 0 40px;
+}
+.common-header .center input[type="search"] {
+	width: 100%;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	margin-top: 7px;
+	text-indent: 5px;
+}
+.common-header .center h2 {
+	line-height: 44px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 400;
+}
+body {
+	border-top:1px solid transparent;
+	margin-top: -1px;
+}
+.mt45 {
+	margin-top: 45px;
+}
+/* 模拟checkbox */ 
+.checkbox-wrap {
+	width: 40px;
+	height: 35px;
+	position: relative;
+}
+.checkbox-wrap:before {
+	width: 20px;
+    height: 20px;
+    background-position: -180px -90px;
+}
+.checkbox-wrap.checked:before {
+	background-position: -180px -70px;
+}
